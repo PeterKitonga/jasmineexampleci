@@ -1,4 +1,4 @@
-## About
+## About [![Build Status](https://travis-ci.org/PeterKitonga/jasmineexampleci.svg?branch=master)](https://travis-ci.org/PeterKitonga/jasmineexampleci)
 
 ### Brief
 
