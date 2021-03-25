@@ -69,6 +69,19 @@
                                 <img class="shadow rounded img-fluid" src="assets/images/code_coverage_report_example.png" alt="Code Coverage Report">
                             </div>
                         </section>
+                        
+                        <section>
+                            <h5><b>Connecting to Travis CI and Configuring the build</b></h5>
+                            <p>
+                                Here, we configure the travis manifest file <em>.travis.yml</em>. This is where we pass the language in use for the test runner, addons, scripts and setup instructions for Travis CI to run inorder to execute our tests. The below file is an example of a config.
+                            </p>
+                            <div class="p-3 my-3 bg-light">
+                                <pre class="yaml" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: green;">language</span><span style="font-weight: bold; color: brown;">: </span>node_js</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #007F45;">node_js</span><span style="font-weight: bold; color: brown;">:</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"></span>  - <span style="color: #CF00CF;">&quot;14.15.1&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #007F45;">install</span><span style="font-weight: bold; color: brown;">:</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"></span>  - npm install</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #007F45;">script</span><span style="font-weight: bold; color: brown;">:</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"></span>  - npm test</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #007F45;">addons</span>:</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: green;">&nbsp; chrome</span><span style="font-weight: bold; color: brown;">: </span>stable</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #007F45;">before_install</span><span style="font-weight: bold; color: brown;">:</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"></span>  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &amp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #007F45;">before_script</span><span style="font-weight: bold; color: brown;">:</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"></span>  - <span style="color: #CF00CF;">&quot;sudo chown root /opt/google/chrome/chrome-sandbox&quot;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">  - <span style="color: #CF00CF;">&quot;sudo chmod 4755 /opt/google/chrome/chrome-sandbox&quot;</span></div></li></ol></pre>
+                            </div>
+                            <p>
+                                With this in place we first need to create an account or sign in to Travis CI and enable our project for travis to run the build. Once the build passes we can copy and add the travis build status badge to our <em>readme.md</em> file. This badge will always let us know whether our tests are passing everytime a commit is pushed to the repository.
+                            </p>
+                        </section>
 
                         <section>                                    
                             <h5><b>Calculator UI</b></h5>
@@ -90,13 +103,10 @@
                         </section>
                         
                         <section>                                    
-                            <h5><b>Calculator Suite</b></h5>
+                            <h5><b>Run tests</b></h5>
                             <p>
-                                Here, you will find a continuation of the previous lesson with all the matchers mentioned above.
+                                You can run the tests on the terminal <code>cd Lesson\ 06\ -\ Reports/ ; npm install ; npm test</code> and visit the coverage report at the <em>/tests/coverage/html/</em> url.
                             </p>
-                            <div class="p-3 my-3 bg-light">
-
-                            </div>
                         </section>
 
                         <div class="d-flex flex-row justify-content-between align-items-center">
