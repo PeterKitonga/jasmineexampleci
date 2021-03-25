@@ -3,8 +3,7 @@ node_js:
   - "14.15.1"
 install:
   - npm install
-script:
-  -npm test
+script: -npm test
 addons:
   chrome: stable
 before_install:
