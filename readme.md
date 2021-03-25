@@ -2,7 +2,7 @@
 
 ### Brief
 
-This repo demonstrates a setup with jasmine for unit testing and a coverage report using istanbul.
+This repo demonstrates an example setup with jasmine for unit testing and a coverage report using istanbul. The CI system in use is travis CI.
 
 ### Setup
 
